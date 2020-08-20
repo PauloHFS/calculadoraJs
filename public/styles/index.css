@@ -1,0 +1,191 @@
+:root {
+	font-size: 60%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+html,
+body,
+#content {
+	width: 100vw;
+	height: 100vh;
+
+	max-width: 700px;
+}
+
+body {
+	background-image: linear-gradient(#000, rgba(255, 255, 255, 0), #000), url(/public/images/wallpaper-mobile.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+body,
+input,
+button{
+	font: 400 4rem Roboto;
+}
+
+#content {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	padding: 3rem;
+}
+
+#content #calculadora {
+	display: grid;
+
+	grid-template-areas: "tela"
+		"teclado";
+
+		background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+#content #calculadora #tela {
+	grid-area: tela;
+
+	font: 500 4rem Roboto;
+}
+
+#content #calculadora #tela #visor {
+	height: 20vh;
+
+	display: flex;
+
+	justify-content: end;
+	align-items: flex-end;
+}
+
+/* Teclado */
+#content #calculadora #teclado {
+	grid-area: teclado;
+
+	display: grid;
+	grid-template-areas: "numeros operacoes";
+}
+
+#content #calculadora #teclado button {
+	padding: 1.5rem 3rem;
+	background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+#content #calculadora #teclado button:hover {
+	background-color: rgba(255, 255, 255, 0.90);
+}
+
+/* numeros */
+#content #calculadora #teclado #numeros {
+	grid-area: numeros;
+
+	display: grid;
+	grid-template-areas:
+		"sete oito nove"
+		"quatro cinco seis"
+		"um dois tres"
+		"zero ponto igual";
+}
+
+#content #calculadora #teclado #numeros #sete {
+	grid-area: sete;
+}
+
+#content #calculadora #teclado #numeros #oito {
+	grid-area: oito;
+}
+
+#content #calculadora #teclado #numeros #nove {
+	grid-area: nove;
+}
+
+#content #calculadora #teclado #numeros #quatro {
+	grid-area: quatro;
+}
+
+#content #calculadora #teclado #numeros #cinco {
+	grid-area: cinco;
+}
+
+#content #calculadora #teclado #numeros #seis {
+	grid-area: seis;
+}
+
+#content #calculadora #teclado #numeros #um {
+	grid-area: um;
+}
+
+#content #calculadora #teclado #numeros #dois {
+	grid-area: dois;
+}
+
+#content #calculadora #teclado #numeros #tres {
+	grid-area: tres;
+}
+
+#content #calculadora #teclado #numeros #zero {
+	grid-area: zero;
+}
+
+#content #calculadora #teclado #numeros #ponto {
+	grid-area: ponto;
+}
+
+#content #calculadora #teclado #numeros #igual {
+	grid-area: igual;
+}
+
+/* operacoes */
+#content #calculadora #teclado #operacoes {
+	grid-area: operacoes;
+
+	display: grid;
+	grid-template-areas: "delete"
+		"multiplicar"
+		"dividir"
+		"menos"
+		"mais";
+}
+
+#content #calculadora #teclado #operacoes #delete {
+	grid-area: delete;
+}
+
+#content #calculadora #teclado #operacoes #multiplicar {
+	grid-area: multiplicar;
+}
+
+#content #calculadora #teclado #operacoes #dividir {
+	grid-area: dividir;
+}
+
+#content #calculadora #teclado #operacoes #menos {
+	grid-area: menos;
+}
+
+#content #calculadora #teclado #operacoes #mais {
+	grid-area: mais;
+}
+
+/* Desktop */
+@media (min-width:700px) {
+
+	:root {
+		font-size: 62.5%;
+	}
+
+	html,
+	body,
+	#content {
+		max-width: 1100px;
+
+		margin: 0 auto;
+	}
+
+}
